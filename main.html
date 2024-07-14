@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            font-size: 50px;
+            text-align: center;
+            padding: 20px;
+            /* margin:0%;  */
+            background-color: #6b5b95;
+            color: white;
+            max-width: 100%;
+            height: auto;
+            /* margin: 20px 0; */
+            width: auto;
+            margin-top: 20px;
+        }
+        .question {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .question-image {
+            
+            max-width: 100%;
+            height: auto;
+            /* margin: 20px 0; */
+            width: auto;
+        }
+        .buttons {
+            margin: 20px 0;
+        }
+        .button {
+            width: 700px; /* Set width according to your image */
+            height: 100px; /* Set height according to your image */
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+            margin: 0%;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+            line-height: 50px;
+            transition: all 0.5s;
+        }
+        .button-authentic {
+            background-image: url('images/authentic button.png'); 
+        }
+        .button-inauthentic {
+            background-image: url('images/inauthentic button.png'); 
+        }
+        .button:hover {
+            transform: translateY(-2px);
+        }
+        .button:active {
+            transform: translateY(2px);
+        }
+        .score {
+            font-size:50px;
+            margin-top:12px;
+            border-radius:2px;
+            width: 1600px; 
+            height: 1000px;
+        }
+.explanation {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+  font-size: 50px;
+  margin-top: 10px; /* Adjust this value to move the element upwards */
+  display: flex;
+  color: rgb(255, 61, 161);
+  height: 90px;
+  width: auto;
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+}
+    </style>
+</head>
+<body>
+    <div class="question" id="question">Question will appear here</div>
+    <img id="question-image" class="question-image" src="" alt="Question Image">
+    <div class="buttons">
+        <button class="button button-authentic" onclick="answer(true)"></button>
+        <button class="button button-inauthentic" onclick="answer(false)"></button>
+    </div>
+    <div class="score" id="score">Score: 0</div>
+    <div class="explanation" id="explanation"></div>
+    <script src="game.js"></script>
+</body>
+</html>
